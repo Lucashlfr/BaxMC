@@ -1,0 +1,4 @@
+name: Hub
+version: 1.0
+author: BaxCodes
+main: net.baxmc.lobbysystem.LobbySystem

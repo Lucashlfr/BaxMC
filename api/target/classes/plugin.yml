@@ -1,0 +1,4 @@
+name: API
+version: 1.0
+author: BaxCodes
+main: net.baxmc.api.bootstrapper.SpigotBootstrapper

@@ -1,0 +1,10 @@
+net\baxmc\api\BaxAPI.class
+net\baxmc\api\language\repository\MultiLanguagerepository.class
+net\baxmc\api\bootstrapper\SpigotBootstrapper.class
+net\baxmc\api\commons\server\manager\AsyncPlayerChatListener.class
+net\baxmc\api\language\repository\IMultiLanguagerepository.class
+net\baxmc\api\sql\SQLAdapter.class
+net\baxmc\api\language\Languages.class
+net\baxmc\api\language\MultiLanguageAPI.class
+net\baxmc\api\utils\ItemBuilder.class
+net\baxmc\api\sql\SQLAuthentification.class
