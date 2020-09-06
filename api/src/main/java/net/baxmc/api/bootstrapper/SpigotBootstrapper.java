@@ -14,6 +14,11 @@ public class SpigotBootstrapper extends JavaPlugin {
 
         final PluginManager pluginManager = Bukkit.getPluginManager();
         pluginManager.registerEvents(new AsyncPlayerChatListener(), this);
+        //TEST
+
+    }
+
+    public void test(){
 
     }
 
