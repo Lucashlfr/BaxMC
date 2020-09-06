@@ -13,5 +13,25 @@
         <module>hub</module>
     </modules>
 
+    <repositories>
+
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://your-repo.net</url>
+        </repository>
+
+    </repositories>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot</artifactId>
+            <version>1.8.8</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+    </dependencies>
 
 </project>
