@@ -1,5 +1,6 @@
 package net.baxmc.lobbysystem;
 
+import net.baxmc.api.BaxAPI;
 import net.baxmc.lobbysystem.cache.ItemCache;
 import net.baxmc.lobbysystem.listener.PlayerJoinListener;
 import org.bukkit.Bukkit;
@@ -10,6 +11,7 @@ public class LobbySystem extends JavaPlugin {
 
     private static LobbySystem instance;
     private ItemCache itemCache;
+    private BaxAPI baxAPI;
 
     @Override
     public void onEnable() {
@@ -19,6 +21,8 @@ public class LobbySystem extends JavaPlugin {
         final PluginManager pluginManager = Bukkit.getPluginManager();
         pluginManager.registerEvents(new PlayerJoinListener(), this);
 
+        baxAPI = new BaxAPI(false);
+
     }
 
     public static LobbySystem getInstance() {
@@ -26,10 +30,18 @@ public class LobbySystem extends JavaPlugin {
     }
 
     public String generateDisplayName(final String name){
-        return "" + name;
+        return "§8» §6§l" + name + " §8▏ §7Rechtsklick";
+    }
+
+    public String generateItemName(final String name){
+        return "§8» §6§l" + name;
     }
 
     public ItemCache getItemCache() {
         return itemCache;
+    }
+
+    public BaxAPI getBaxAPI() {
+        return baxAPI;
     }
 }
