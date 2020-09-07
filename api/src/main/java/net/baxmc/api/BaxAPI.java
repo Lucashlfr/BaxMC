@@ -8,20 +8,27 @@ import org.bukkit.Material;
 
 public class BaxAPI {
 
-    private static BaxAPI instance;
+    private static BaxAPI baxAPI;
     private boolean bungeecord;
+    private String errorPrefix, warningPrefix, infoPrefix, prefix;
 
     private SQLAdapter sqlAdapter;
     private MultiLanguageAPI multiLanguageAPI;
 
     public BaxAPI(boolean bungeecord){
-        instance = this;
+        baxAPI = this;
         this.bungeecord = bungeecord;
+
+        this.errorPrefix = "§8[§4§lError§8] §f";
+        this.warningPrefix = "§8[§6§lWarning§8] §f";
+        this.infoPrefix = "§8[§2§lInformation§8] §f";
+        this.prefix = "§8[§f§lBaxMC§8] §f";
+
         onEnable();
     }
 
     public static BaxAPI getInstance() {
-        return instance;
+        return baxAPI;
     }
 
     private void onEnable(){
@@ -40,5 +47,29 @@ public class BaxAPI {
 
     public ItemBuilder generateItem(Material material) {
         return new ItemBuilder(material);
+    }
+
+    public static BaxAPI getBaxAPI() {
+        return baxAPI;
+    }
+
+    public boolean isBungeecord() {
+        return bungeecord;
+    }
+
+    public String getErrorPrefix() {
+        return errorPrefix;
+    }
+
+    public String getWarningPrefix() {
+        return warningPrefix;
+    }
+
+    public String getInfoPrefix() {
+        return infoPrefix;
+    }
+
+    public String getPrefix() {
+        return prefix;
     }
 }

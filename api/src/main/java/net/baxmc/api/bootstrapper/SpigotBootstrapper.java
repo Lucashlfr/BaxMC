@@ -10,7 +10,7 @@ public class SpigotBootstrapper extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        new BaxAPI(false);
+        BaxAPI baxAPI = BaxAPI.getInstance();
 
         final PluginManager pluginManager = Bukkit.getPluginManager();
         pluginManager.registerEvents(new AsyncPlayerChatListener(), this);

@@ -1,0 +1,5 @@
+name: LobbySystem
+version: 1.0
+author: BaxCodes
+main: net.baxmc.lobbysystem.LobbySystem
+depend: [API]
